@@ -368,7 +368,8 @@ const Dashboard = () => {
           ([building, roomGroups]) => (
             <div key={building} className="border-t pt-4">
               <h3 className="text-xl font-semibold mb-2">
-                {building}: {locationMapping[building]}
+                {building}: {locationMapping[building]} Campus (
+                {Object.keys(roomGroups).length} rooms)
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {Object.entries(roomGroups).map(([baseRoomNumber, rooms]) => {
@@ -411,4 +412,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
